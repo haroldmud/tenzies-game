@@ -54,10 +54,6 @@ export default function Dice(){
     console.log(again);
   })
   
-  function restart(){
-    return window.location.reload();
-  }
-  
   return(
     <section className="relative">
     <div className="flex justify-center h-12 mt-6"> 
@@ -83,7 +79,7 @@ export default function Dice(){
     }
     <div className="w-full  flex justify-center mt-8">
       {
-        again.length === 10 ? <button onClick={restart} className="w-fit bg-blue-700 px-3 py-1 rounded text-white font-bold mx-auto">Restart</button> : <button onClick={()=>rollDice()} className="w-fit bg-blue-700 px-3 py-1 rounded text-white font-bold mx-auto">Roll</button>
+        again.length === 10 ? <button onClick={()=>setCollection(provider())} className="w-fit bg-blue-700 px-3 py-1 rounded text-white font-bold mx-auto">Restart</button> : <button onClick={()=>rollDice()} className="w-fit bg-blue-700 px-3 py-1 rounded text-white font-bold mx-auto">Roll</button>
       }
     </div>
     
