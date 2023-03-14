@@ -1,6 +1,5 @@
 import Dice from "./components/dice"
 
-
 export default function App() {
   
   return (
